@@ -1,0 +1,8 @@
+numpy==1.26.4
+pandas==2.2.3
+scipy>=1.11
+scikit-learn==1.5.2
+torch==2.4.1
+modal>=0.64
+tabpfn>=2.0.0
+tabicl>=0.1.0

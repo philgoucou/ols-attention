@@ -1,0 +1,766 @@
+dataset,model,seed_idx,cap,n_train_available,n_train_used,limits_overridden,default_refused,r2,wall_s,error
+California,TabPFN,0,-1,16512,16512,False,False,0.8729852437973022,17.447476387023926,
+California,TabPFN,1,-1,16512,16512,False,False,0.8763251900672913,17.498980283737183,
+California,TabPFN,2,-1,16512,16512,False,False,0.869702935218811,19.150492429733276,
+California,TabPFN,3,-1,16512,16512,False,False,0.8723458051681519,16.269623041152954,
+California,TabPFN,4,-1,16512,16512,False,False,0.8698659539222717,28.906662702560425,
+California,TabICL,0,-1,16512,16512,False,,,12.048688411712646,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+California,TabICL,1,-1,16512,16512,False,,,8.907156944274902,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+California,TabICL,2,-1,16512,16512,False,,,9.640033483505249,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+California,TabICL,3,-1,16512,16512,False,,,11.70569372177124,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+California,TabICL,4,-1,16512,16512,False,,,11.979828119277954,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+Kin8nm,TabPFN,0,-1,6553,6553,False,False,0.9362873435020447,16.93521738052368,
+Kin8nm,TabPFN,1,-1,6553,6553,False,False,0.9348315000534058,13.173034429550171,
+Kin8nm,TabPFN,2,-1,6553,6553,False,False,0.9384289979934692,15.68358039855957,
+Kin8nm,TabPFN,3,-1,6553,6553,False,False,0.9348087906837463,16.587036609649658,
+Kin8nm,TabPFN,4,-1,6553,6553,False,False,0.9321159720420837,14.754015922546387,
+Kin8nm,TabICL,0,-1,6553,6553,False,,,11.922904968261719,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+Kin8nm,TabICL,1,-1,6553,6553,False,,,7.519912481307983,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+Kin8nm,TabICL,2,-1,6553,6553,False,,,9.110904693603516,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+Kin8nm,TabICL,3,-1,6553,6553,False,,,11.388268947601318,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+Kin8nm,TabICL,4,-1,6553,6553,False,,,8.189600229263306,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+Protein,TabPFN,0,-1,36584,36584,False,False,0.7769515514373779,28.679272890090942,
+Protein,TabPFN,1,-1,36584,36584,False,False,0.7760788798332214,27.79324960708618,
+Protein,TabPFN,2,-1,36584,36584,False,False,0.770649790763855,27.109291315078735,
+Protein,TabPFN,3,-1,36584,36584,False,False,0.7753682136535645,25.932917833328247,
+Protein,TabPFN,4,-1,36584,36584,False,False,0.7653261423110962,25.93935799598694,
+Protein,TabICL,0,-1,36584,36584,False,,,12.99178957939148,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+Protein,TabICL,1,-1,36584,36584,False,,,11.119697332382202,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+Protein,TabICL,2,-1,36584,36584,False,,,12.459157228469849,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+Protein,TabICL,3,-1,36584,36584,False,,,11.807480573654175,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"
+Protein,TabICL,4,-1,36584,36584,False,,,1.1019766330718994,"ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File ""/root/rebuttal_fm_uncapped.py"", line 141, in run_fm_uncapped
+    pred = m.predict(Xte)
+           ^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 748, in predict
+    batch_out = self._batch_forward(Xs, ys, output_type=output_type, alphas=alphas)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_sklearn/regressor.py"", line 524, in _batch_forward
+    out = self.model_.predict_stats(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 569, in predict_stats
+    raw_quantiles = self._inference_forward(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/tabicl.py"", line 409, in _inference_forward
+    self.col_embedder(
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 730, in forward
+    embeddings = self._inference_forward(X, y_train, embed_with_test, feature_shuffles, mgr_config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 570, in _inference_forward
+    embeddings = self._inference_with_feature_group(X, y_train, train_size, embed_with_test)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/embedding.py"", line 594, in _inference_with_feature_group
+    return self.inference_mgr(
+           ^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 1148, in __call__
+    gpu_mem, batch_size = self.estimate_safe_batch_size(seq_len, include_inputs=not inputs_on_cuda, in_dim=in_dim)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 861, in estimate_safe_batch_size
+    available_mem = self.get_available_gpu_memory()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/tabicl/_model/inference.py"", line 783, in get_available_gpu_memory
+    return torch.cuda.mem_get_info(self.exe_device)[0] / (1024 * 1024)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/memory.py"", line 684, in mem_get_info
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/cuda/_utils.py"", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/_utils.py"", line 803, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+"

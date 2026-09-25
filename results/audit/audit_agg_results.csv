@@ -1,0 +1,466 @@
+setting,dataset,n_mix,ncomp,seed_idx,score,P,n_train,params,version,wall_s,error
+std,California,3,50,0,0.7295477390289307,8.0,4000.0,10881.0,v7-aggressive,9.208898782730103,
+std,California,3,50,1,0.7674102187156677,8.0,4000.0,10881.0,v7-aggressive,11.877644777297974,
+std,California,3,50,2,0.7650654315948486,8.0,4000.0,10881.0,v7-aggressive,13.704072952270508,
+std,California,3,50,3,0.7323395013809204,8.0,4000.0,10881.0,v7-aggressive,15.481473684310913,
+std,California,3,50,4,0.7379339933395386,8.0,4000.0,10881.0,v7-aggressive,19.145723581314087,
+std,Yacht,3,50,0,0.9726364612579346,6.0,246.0,10753.0,v7-aggressive,2.9513356685638428,
+std,Yacht,3,50,1,0.9609061479568481,6.0,246.0,10753.0,v7-aggressive,8.39461898803711,
+std,Yacht,3,50,2,0.9887931942939758,6.0,246.0,10753.0,v7-aggressive,3.8245022296905518,
+std,Yacht,3,50,3,0.9937568306922913,6.0,246.0,10753.0,v7-aggressive,5.520979881286621,
+std,Yacht,3,50,4,0.9925183653831482,6.0,246.0,10753.0,v7-aggressive,5.3046369552612305,
+std,Energy,3,50,0,0.9862518906593323,8.0,614.0,10881.0,v7-aggressive,12.88289475440979,
+std,Energy,3,50,1,0.9761137366294861,8.0,614.0,10881.0,v7-aggressive,6.9036970138549805,
+std,Energy,3,50,2,0.9883537292480469,8.0,614.0,10881.0,v7-aggressive,12.784074306488037,
+std,Energy,3,50,3,0.9876644015312195,8.0,614.0,10881.0,v7-aggressive,8.378989458084106,
+std,Energy,3,50,4,0.9824700355529785,8.0,614.0,10881.0,v7-aggressive,7.324057579040527,
+std,Concrete,3,50,0,0.8457809686660767,8.0,824.0,10881.0,v7-aggressive,9.957414627075195,
+std,Concrete,3,50,1,0.8595407009124756,8.0,824.0,10881.0,v7-aggressive,9.484806776046753,
+std,Concrete,3,50,2,0.8605715036392212,8.0,824.0,10881.0,v7-aggressive,11.302628993988037,
+std,Concrete,3,50,3,0.8599982857704163,8.0,824.0,10881.0,v7-aggressive,8.518053531646729,
+std,Concrete,3,50,4,0.887295663356781,8.0,824.0,10881.0,v7-aggressive,13.11098575592041,
+std,Airfoil,3,50,0,0.9525924324989319,5.0,1202.0,10689.0,v7-aggressive,8.761032819747925,
+std,Airfoil,3,50,1,0.914949357509613,5.0,1202.0,10689.0,v7-aggressive,4.1163225173950195,
+std,Airfoil,3,50,2,0.9406740665435791,5.0,1202.0,10689.0,v7-aggressive,8.227591514587402,
+std,Airfoil,3,50,3,0.888891875743866,5.0,1202.0,10689.0,v7-aggressive,6.25225830078125,
+std,Airfoil,3,50,4,0.9342128038406372,5.0,1202.0,10689.0,v7-aggressive,9.224575757980347,
+std,Abalone,3,50,0,0.30405187606811523,7.0,3341.0,10817.0,v7-aggressive,8.688075304031372,
+std,Abalone,3,50,1,0.3485965132713318,7.0,3341.0,10817.0,v7-aggressive,5.922897815704346,
+std,Abalone,3,50,2,0.3328472971916199,7.0,3341.0,10817.0,v7-aggressive,10.69859766960144,
+std,Abalone,3,50,3,0.30942320823669434,7.0,3341.0,10817.0,v7-aggressive,11.889165163040161,
+std,Abalone,3,50,4,0.28142350912094116,7.0,3341.0,10817.0,v7-aggressive,9.505890846252441,
+std,Kin8nm,3,50,0,0.8560079336166382,8.0,4000.0,10881.0,v7-aggressive,19.507169246673584,
+std,Kin8nm,3,50,1,0.8435335159301758,8.0,4000.0,10881.0,v7-aggressive,20.660174131393433,
+std,Kin8nm,3,50,2,0.8543694019317627,8.0,4000.0,10881.0,v7-aggressive,21.634862184524536,
+std,Kin8nm,3,50,3,0.859234094619751,8.0,4000.0,10881.0,v7-aggressive,17.25028347969055,
+std,Kin8nm,3,50,4,0.85581374168396,8.0,4000.0,10881.0,v7-aggressive,20.328129291534424,
+std,Protein,3,50,0,0.4519627094268799,9.0,4000.0,10945.0,v7-aggressive,16.650574445724487,
+std,Protein,3,50,1,0.4259934425354004,9.0,4000.0,10945.0,v7-aggressive,14.174108266830444,
+std,Protein,3,50,2,0.41052132844924927,9.0,4000.0,10945.0,v7-aggressive,20.23904013633728,
+std,Protein,3,50,3,0.453962504863739,9.0,4000.0,10945.0,v7-aggressive,20.739739656448364,
+std,Protein,3,50,4,0.46274882555007935,9.0,4000.0,10945.0,v7-aggressive,13.480067729949951,
+uncapped,California,2,50,0,0.7869415283203125,8.0,16512.0,7489.0,v7-aggressive,47.284173011779785,
+uncapped,California,2,50,1,0.7932156324386597,8.0,16512.0,7489.0,v7-aggressive,49.49445056915283,
+uncapped,California,2,50,2,0.7884997129440308,8.0,16512.0,7489.0,v7-aggressive,38.58209729194641,
+uncapped,California,2,50,3,0.7814207077026367,8.0,16512.0,7489.0,v7-aggressive,39.03280735015869,
+uncapped,California,2,50,4,0.7860607504844666,8.0,16512.0,7489.0,v7-aggressive,35.07421684265137,
+uncapped,Kin8nm,2,50,0,0.9219083786010742,8.0,6553.0,7489.0,v7-aggressive,24.392504930496216,
+uncapped,Kin8nm,2,50,1,0.9206776022911072,8.0,6553.0,7489.0,v7-aggressive,24.26529836654663,
+uncapped,Kin8nm,2,50,2,0.9236438870429993,8.0,6553.0,7489.0,v7-aggressive,21.571796894073486,
+uncapped,Kin8nm,2,50,3,0.9205570220947266,8.0,6553.0,7489.0,v7-aggressive,25.466768264770508,
+uncapped,Kin8nm,2,50,4,0.9156968593597412,8.0,6553.0,7489.0,v7-aggressive,21.617058992385864,
+uncapped,Protein,2,50,0,0.5593037009239197,9.0,36584.0,7553.0,v7-aggressive,165.89744400978088,
+uncapped,Protein,2,50,1,0.6131563186645508,9.0,36584.0,7553.0,v7-aggressive,318.39013028144836,
+uncapped,Protein,2,50,2,0.6334630846977234,9.0,36584.0,7553.0,v7-aggressive,401.3797628879547,
+uncapped,Protein,2,50,3,0.6313662528991699,9.0,36584.0,7553.0,v7-aggressive,350.1356523036957,
+uncapped,Protein,2,50,4,0.6331621408462524,9.0,36584.0,7553.0,v7-aggressive,728.8475160598755,
+highdim,CPU_act,2,50,0,0.9692885279655457,21.0,4000.0,8321.0,v7-aggressive,126.93960404396057,
+highdim,CPU_act,2,50,1,0.9546868801116943,21.0,4000.0,8321.0,v7-aggressive,89.37451338768005,
+highdim,CPU_act,2,50,2,0.9648916721343994,21.0,4000.0,8321.0,v7-aggressive,223.95244550704956,
+highdim,CPU_act,2,50,3,0.9630829095840454,21.0,4000.0,8321.0,v7-aggressive,108.97778916358948,
+highdim,CPU_act,2,50,4,0.9612829685211182,21.0,4000.0,8321.0,v7-aggressive,125.33747553825378,
+highdim,CPU_act,3,50,0,0.9537721872329712,21.0,4000.0,11713.0,v7-aggressive,162.62658190727234,
+highdim,CPU_act,3,50,1,0.940064549446106,21.0,4000.0,11713.0,v7-aggressive,242.45194911956787,
+highdim,CPU_act,3,50,2,0.9455515146255493,21.0,4000.0,11713.0,v7-aggressive,108.8874659538269,
+highdim,CPU_act,3,50,3,0.9384225010871887,21.0,4000.0,11713.0,v7-aggressive,161.55087757110596,
+highdim,CPU_act,3,50,4,0.9437302947044373,21.0,4000.0,11713.0,v7-aggressive,167.84779739379883,
+highdim,Bank32nh,2,50,0,0.4879770278930664,32.0,4000.0,9025.0,v7-aggressive,232.55275893211365,
+highdim,Bank32nh,2,50,1,0.4051241874694824,32.0,4000.0,9025.0,v7-aggressive,278.2217814922333,
+highdim,Bank32nh,2,50,2,0.4984096884727478,32.0,4000.0,9025.0,v7-aggressive,200.2096483707428,
+highdim,Bank32nh,2,50,3,0.489884614944458,32.0,4000.0,9025.0,v7-aggressive,189.12503242492676,
+highdim,Bank32nh,2,50,4,0.48464590311050415,32.0,4000.0,9025.0,v7-aggressive,321.36848068237305,
+highdim,Bank32nh,3,50,0,0.24075967073440552,32.0,4000.0,12417.0,v7-aggressive,241.61879515647888,
+highdim,Bank32nh,3,50,1,0.16146349906921387,32.0,4000.0,12417.0,v7-aggressive,241.58092856407166,
+highdim,Bank32nh,3,50,2,0.20116955041885376,32.0,4000.0,12417.0,v7-aggressive,308.02462100982666,
+highdim,Bank32nh,3,50,3,0.20698153972625732,32.0,4000.0,12417.0,v7-aggressive,307.72864508628845,
+highdim,Bank32nh,3,50,4,0.17128527164459229,32.0,4000.0,12417.0,v7-aggressive,271.8717839717865,
+highdim,Ailerons,2,50,0,0.8061874508857727,40.0,4000.0,9537.0,v7-aggressive,513.4671213626862,
+highdim,Ailerons,2,50,1,0.8184621334075928,40.0,4000.0,9537.0,v7-aggressive,453.1367416381836,
+highdim,Ailerons,2,50,2,0.8145856857299805,40.0,4000.0,9537.0,v7-aggressive,376.4705185890198,
+highdim,Ailerons,2,50,3,0.8106920719146729,40.0,4000.0,9537.0,v7-aggressive,320.1797912120819,
+highdim,Ailerons,2,50,4,0.8354708552360535,40.0,4000.0,9537.0,v7-aggressive,420.93783926963806,
+highdim,Ailerons,3,50,0,0.7641621828079224,40.0,4000.0,12929.0,v7-aggressive,498.70604848861694,
+highdim,Ailerons,3,50,1,0.7406224012374878,40.0,4000.0,12929.0,v7-aggressive,492.5862376689911,
+highdim,Ailerons,3,50,2,0.7290985584259033,40.0,4000.0,12929.0,v7-aggressive,430.2262921333313,
+highdim,Ailerons,3,50,3,0.7836260199546814,40.0,4000.0,12929.0,v7-aggressive,467.8054428100586,
+highdim,Ailerons,3,50,4,0.7727842926979065,40.0,4000.0,12929.0,v7-aggressive,456.7234218120575,
+highdim,Pol,2,50,0,0.9820944666862488,48.0,4000.0,10049.0,v7-aggressive,2092.5689079761505,
+highdim,Pol,2,50,1,0.9703546166419983,48.0,4000.0,10049.0,v7-aggressive,961.0098600387573,
+highdim,Pol,2,50,2,0.9862343072891235,48.0,4000.0,10049.0,v7-aggressive,1475.5483009815216,
+highdim,Pol,2,50,3,0.9826583862304688,48.0,4000.0,10049.0,v7-aggressive,2278.4353992938995,
+highdim,Pol,2,50,4,0.9858216643333435,48.0,4000.0,10049.0,v7-aggressive,1882.9000418186188,
+highdim,Pol,3,50,0,0.9768862724304199,48.0,4000.0,13441.0,v7-aggressive,1822.217366218567,
+highdim,Pol,3,50,1,0.9827722311019897,48.0,4000.0,13441.0,v7-aggressive,2065.243539571762,
+highdim,Pol,3,50,2,0.9880253076553345,48.0,4000.0,13441.0,v7-aggressive,2262.194456577301,
+highdim,Pol,3,50,3,0.9792724251747131,48.0,4000.0,13441.0,v7-aggressive,2373.95871758461,
+highdim,Pol,3,50,4,0.9823995232582092,48.0,4000.0,13441.0,v7-aggressive,3032.568747520447,
+highdim,Superconductivity,2,50,0,,,,,v7-aggressive,316.90712881088257,"OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 15.10 GiB is free. Process 1 has 6.96 GiB memory in use. Of the allocated memory 621.46 MiB is allocated by PyTorch, and 6.07 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File ""/root/rebuttal_aggressive.py"", line 233, in run_aggressive
+    out = fit_nn(model, Xtr, ytr, Xte, device, ms['batch_size'], classification=clf, n_out=n_out)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 162, in fit_nn
+    with torch.no_grad(): vl = crit(model(Xv), yv).item()
+                                    ^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 120, in forward
+    for m in self.mixers: h = m(h)
+                              ^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 106, in forward
+    def forward(self, h): return self.n(h + self.W(self.feat(h)))
+                                                   ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 105, in feat
+    def feat(self, h): return self.red(polycross(h))
+                                       ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 91, in polycross
+    return torch.cat([per, pairs.unsqueeze(1).expand(B, S, -1)], dim=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 15.10 GiB is free. Process 1 has 6.96 GiB memory in use. Of the allocated memory 621.46 MiB is allocated by PyTorch, and 6.07 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+highdim,Superconductivity,2,50,1,,,,,v7-aggressive,310.9380786418915,"OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 15.17 GiB is free. Process 1 has 6.88 GiB memory in use. Of the allocated memory 621.46 MiB is allocated by PyTorch, and 6.00 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File ""/root/rebuttal_aggressive.py"", line 233, in run_aggressive
+    out = fit_nn(model, Xtr, ytr, Xte, device, ms['batch_size'], classification=clf, n_out=n_out)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 162, in fit_nn
+    with torch.no_grad(): vl = crit(model(Xv), yv).item()
+                                    ^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 120, in forward
+    for m in self.mixers: h = m(h)
+                              ^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 106, in forward
+    def forward(self, h): return self.n(h + self.W(self.feat(h)))
+                                                   ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 105, in feat
+    def feat(self, h): return self.red(polycross(h))
+                                       ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 91, in polycross
+    return torch.cat([per, pairs.unsqueeze(1).expand(B, S, -1)], dim=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 15.17 GiB is free. Process 1 has 6.88 GiB memory in use. Of the allocated memory 621.46 MiB is allocated by PyTorch, and 6.00 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+highdim,Superconductivity,2,50,2,,,,,v7-aggressive,356.26999592781067,"OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 15.16 GiB is free. Process 1 has 6.88 GiB memory in use. Of the allocated memory 621.46 MiB is allocated by PyTorch, and 6.00 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File ""/root/rebuttal_aggressive.py"", line 233, in run_aggressive
+    out = fit_nn(model, Xtr, ytr, Xte, device, ms['batch_size'], classification=clf, n_out=n_out)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 162, in fit_nn
+    with torch.no_grad(): vl = crit(model(Xv), yv).item()
+                                    ^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 120, in forward
+    for m in self.mixers: h = m(h)
+                              ^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 106, in forward
+    def forward(self, h): return self.n(h + self.W(self.feat(h)))
+                                                   ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 105, in feat
+    def feat(self, h): return self.red(polycross(h))
+                                       ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 91, in polycross
+    return torch.cat([per, pairs.unsqueeze(1).expand(B, S, -1)], dim=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 15.16 GiB is free. Process 1 has 6.88 GiB memory in use. Of the allocated memory 621.46 MiB is allocated by PyTorch, and 6.00 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+highdim,Superconductivity,2,50,3,,,,,v7-aggressive,315.9074478149414,"OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 15.17 GiB is free. Process 1 has 6.88 GiB memory in use. Of the allocated memory 621.46 MiB is allocated by PyTorch, and 6.00 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File ""/root/rebuttal_aggressive.py"", line 233, in run_aggressive
+    out = fit_nn(model, Xtr, ytr, Xte, device, ms['batch_size'], classification=clf, n_out=n_out)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 162, in fit_nn
+    with torch.no_grad(): vl = crit(model(Xv), yv).item()
+                                    ^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 120, in forward
+    for m in self.mixers: h = m(h)
+                              ^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 106, in forward
+    def forward(self, h): return self.n(h + self.W(self.feat(h)))
+                                                   ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 105, in feat
+    def feat(self, h): return self.red(polycross(h))
+                                       ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 91, in polycross
+    return torch.cat([per, pairs.unsqueeze(1).expand(B, S, -1)], dim=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 15.17 GiB is free. Process 1 has 6.88 GiB memory in use. Of the allocated memory 621.46 MiB is allocated by PyTorch, and 6.00 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+highdim,Superconductivity,2,50,4,,,,,v7-aggressive,435.8139216899872,"OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 15.14 GiB is free. Process 1 has 6.91 GiB memory in use. Of the allocated memory 621.46 MiB is allocated by PyTorch, and 6.00 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File ""/root/rebuttal_aggressive.py"", line 233, in run_aggressive
+    out = fit_nn(model, Xtr, ytr, Xte, device, ms['batch_size'], classification=clf, n_out=n_out)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 162, in fit_nn
+    with torch.no_grad(): vl = crit(model(Xv), yv).item()
+                                    ^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 120, in forward
+    for m in self.mixers: h = m(h)
+                              ^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 106, in forward
+    def forward(self, h): return self.n(h + self.W(self.feat(h)))
+                                                   ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 105, in feat
+    def feat(self, h): return self.red(polycross(h))
+                                       ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 91, in polycross
+    return torch.cat([per, pairs.unsqueeze(1).expand(B, S, -1)], dim=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 15.14 GiB is free. Process 1 has 6.91 GiB memory in use. Of the allocated memory 621.46 MiB is allocated by PyTorch, and 6.00 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+highdim,Superconductivity,3,50,0,,,,,v7-aggressive,477.4696035385132,"OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 19.25 GiB is free. Process 1 has 2.80 GiB memory in use. Of the allocated memory 662.89 MiB is allocated by PyTorch, and 1.87 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File ""/root/rebuttal_aggressive.py"", line 233, in run_aggressive
+    out = fit_nn(model, Xtr, ytr, Xte, device, ms['batch_size'], classification=clf, n_out=n_out)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 162, in fit_nn
+    with torch.no_grad(): vl = crit(model(Xv), yv).item()
+                                    ^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 120, in forward
+    for m in self.mixers: h = m(h)
+                              ^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 106, in forward
+    def forward(self, h): return self.n(h + self.W(self.feat(h)))
+                                                   ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 105, in feat
+    def feat(self, h): return self.red(polycross(h))
+                                       ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 91, in polycross
+    return torch.cat([per, pairs.unsqueeze(1).expand(B, S, -1)], dim=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 19.25 GiB is free. Process 1 has 2.80 GiB memory in use. Of the allocated memory 662.89 MiB is allocated by PyTorch, and 1.87 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+highdim,Superconductivity,3,50,1,,,,,v7-aggressive,477.10958766937256,"OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 19.18 GiB is free. Process 1 has 2.87 GiB memory in use. Of the allocated memory 662.89 MiB is allocated by PyTorch, and 1.94 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File ""/root/rebuttal_aggressive.py"", line 233, in run_aggressive
+    out = fit_nn(model, Xtr, ytr, Xte, device, ms['batch_size'], classification=clf, n_out=n_out)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 162, in fit_nn
+    with torch.no_grad(): vl = crit(model(Xv), yv).item()
+                                    ^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 120, in forward
+    for m in self.mixers: h = m(h)
+                              ^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 106, in forward
+    def forward(self, h): return self.n(h + self.W(self.feat(h)))
+                                                   ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 105, in feat
+    def feat(self, h): return self.red(polycross(h))
+                                       ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 91, in polycross
+    return torch.cat([per, pairs.unsqueeze(1).expand(B, S, -1)], dim=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 19.18 GiB is free. Process 1 has 2.87 GiB memory in use. Of the allocated memory 662.89 MiB is allocated by PyTorch, and 1.94 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+highdim,Superconductivity,3,50,2,,,,,v7-aggressive,471.93358397483826,"OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 19.25 GiB is free. Process 1 has 2.80 GiB memory in use. Of the allocated memory 662.89 MiB is allocated by PyTorch, and 1.87 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File ""/root/rebuttal_aggressive.py"", line 233, in run_aggressive
+    out = fit_nn(model, Xtr, ytr, Xte, device, ms['batch_size'], classification=clf, n_out=n_out)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 162, in fit_nn
+    with torch.no_grad(): vl = crit(model(Xv), yv).item()
+                                    ^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 120, in forward
+    for m in self.mixers: h = m(h)
+                              ^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 106, in forward
+    def forward(self, h): return self.n(h + self.W(self.feat(h)))
+                                                   ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 105, in feat
+    def feat(self, h): return self.red(polycross(h))
+                                       ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 91, in polycross
+    return torch.cat([per, pairs.unsqueeze(1).expand(B, S, -1)], dim=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 19.25 GiB is free. Process 1 has 2.80 GiB memory in use. Of the allocated memory 662.89 MiB is allocated by PyTorch, and 1.87 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+highdim,Superconductivity,3,50,3,,,,,v7-aggressive,489.65187430381775,"OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 19.21 GiB is free. Process 1 has 2.84 GiB memory in use. Of the allocated memory 662.89 MiB is allocated by PyTorch, and 1.91 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File ""/root/rebuttal_aggressive.py"", line 233, in run_aggressive
+    out = fit_nn(model, Xtr, ytr, Xte, device, ms['batch_size'], classification=clf, n_out=n_out)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 162, in fit_nn
+    with torch.no_grad(): vl = crit(model(Xv), yv).item()
+                                    ^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 120, in forward
+    for m in self.mixers: h = m(h)
+                              ^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 106, in forward
+    def forward(self, h): return self.n(h + self.W(self.feat(h)))
+                                                   ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 105, in feat
+    def feat(self, h): return self.red(polycross(h))
+                                       ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 91, in polycross
+    return torch.cat([per, pairs.unsqueeze(1).expand(B, S, -1)], dim=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 19.21 GiB is free. Process 1 has 2.84 GiB memory in use. Of the allocated memory 662.89 MiB is allocated by PyTorch, and 1.91 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+highdim,Superconductivity,3,50,4,,,,,v7-aggressive,740.0529727935791,"OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 19.26 GiB is free. Process 1 has 2.79 GiB memory in use. Of the allocated memory 663.25 MiB is allocated by PyTorch, and 1.84 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File ""/root/rebuttal_aggressive.py"", line 233, in run_aggressive
+    out = fit_nn(model, Xtr, ytr, Xte, device, ms['batch_size'], classification=clf, n_out=n_out)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 162, in fit_nn
+    with torch.no_grad(): vl = crit(model(Xv), yv).item()
+                                    ^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 120, in forward
+    for m in self.mixers: h = m(h)
+                              ^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py"", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 106, in forward
+    def forward(self, h): return self.n(h + self.W(self.feat(h)))
+                                                   ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 105, in feat
+    def feat(self, h): return self.red(polycross(h))
+                                       ^^^^^^^^^^^^
+  File ""/root/rebuttal_aggressive.py"", line 91, in polycross
+    return torch.cat([per, pairs.unsqueeze(1).expand(B, S, -1)], dim=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.51 GiB. GPU 0 has a total capacity of 22.06 GiB of which 19.26 GiB is free. Process 1 has 2.79 GiB memory in use. Of the allocated memory 663.25 MiB is allocated by PyTorch, and 1.84 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"
+classify,BreastCancer,2,50,0,0.956140350877193,30.0,455.0,8962.0,v7-aggressive,56.647687911987305,
+classify,BreastCancer,2,50,1,0.9736842105263158,30.0,455.0,8962.0,v7-aggressive,56.70133090019226,
+classify,BreastCancer,2,50,2,0.9736842105263158,30.0,455.0,8962.0,v7-aggressive,41.64141082763672,
+classify,BreastCancer,2,50,3,0.956140350877193,30.0,455.0,8962.0,v7-aggressive,40.05121922492981,
+classify,BreastCancer,2,50,4,0.9385964912280702,30.0,455.0,8962.0,v7-aggressive,42.81470847129822,
+classify,Diabetes,2,50,0,0.7012987012987013,8.0,614.0,7554.0,v7-aggressive,1.8627538681030273,
+classify,Diabetes,2,50,1,0.7142857142857143,8.0,614.0,7554.0,v7-aggressive,2.132147789001465,
+classify,Diabetes,2,50,2,0.7662337662337663,8.0,614.0,7554.0,v7-aggressive,2.1934027671813965,
+classify,Diabetes,2,50,3,0.7532467532467533,8.0,614.0,7554.0,v7-aggressive,1.7371339797973633,
+classify,Diabetes,2,50,4,0.7077922077922078,8.0,614.0,7554.0,v7-aggressive,1.752816915512085,
+classify,Phoneme,2,50,0,0.857,5.0,4000.0,7362.0,v7-aggressive,8.467028379440308,
+classify,Phoneme,2,50,1,0.849,5.0,4000.0,7362.0,v7-aggressive,4.393668174743652,
+classify,Phoneme,2,50,2,0.857,5.0,4000.0,7362.0,v7-aggressive,6.293490648269653,
+classify,Phoneme,2,50,3,0.863,5.0,4000.0,7362.0,v7-aggressive,4.61334490776062,
+classify,Phoneme,2,50,4,0.849,5.0,4000.0,7362.0,v7-aggressive,9.16138482093811,
+classify,Wine,2,50,0,0.9444444444444444,13.0,142.0,7939.0,v7-aggressive,9.258507251739502,
+classify,Wine,2,50,1,0.9722222222222222,13.0,142.0,7939.0,v7-aggressive,9.555986881256104,
+classify,Wine,2,50,2,0.9722222222222222,13.0,142.0,7939.0,v7-aggressive,9.676750898361206,
+classify,Wine,2,50,3,1.0,13.0,142.0,7939.0,v7-aggressive,10.062214136123657,
+classify,Wine,2,50,4,0.9444444444444444,13.0,142.0,7939.0,v7-aggressive,3.720109701156616,
+classify,Vehicle,2,50,0,0.8117647058823529,18.0,676.0,8324.0,v7-aggressive,14.903976202011108,
+classify,Vehicle,2,50,1,0.8176470588235294,18.0,676.0,8324.0,v7-aggressive,16.81446361541748,
+classify,Vehicle,2,50,2,0.8470588235294118,18.0,676.0,8324.0,v7-aggressive,17.947728872299194,
+classify,Vehicle,2,50,3,0.8176470588235294,18.0,676.0,8324.0,v7-aggressive,18.875016927719116,
+classify,Vehicle,2,50,4,0.8,18.0,676.0,8324.0,v7-aggressive,15.72112226486206,
+classify,Segment,2,50,0,0.9632034632034632,19.0,1848.0,8583.0,v7-aggressive,81.2548451423645,
+classify,Segment,2,50,1,0.9632034632034632,19.0,1848.0,8583.0,v7-aggressive,52.62523436546326,
+classify,Segment,2,50,2,0.974025974025974,19.0,1848.0,8583.0,v7-aggressive,51.27250552177429,
+classify,Segment,2,50,3,0.961038961038961,19.0,1848.0,8583.0,v7-aggressive,53.222267866134644,
+classify,Segment,2,50,4,0.9696969696969697,19.0,1848.0,8583.0,v7-aggressive,66.26952600479126,
