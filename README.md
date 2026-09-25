@@ -68,8 +68,11 @@ features and targets on the training split are fixed inside the scripts. GPUs us
 A100-80GB for P >= 40 (the degree-2 cross-feature map is O(P^2)).
 
 `experiments/modal/rebuttal_aggressive.py` is a reconstruction: the original harness was lost with a
-temporary directory after its CSV had been saved; the reconstruction is verified against that CSV
-cell by cell (see its header).
+temporary directory after its CSV had been saved. It was rebuilt from `rebuttal_sublayer.py` and
+`rebuttal_classify.py` and re-run against the CSV's per-seed cells (`modal run rebuttal_aggressive.py::canary`):
+parameter counts identical on every setting; scores within GPU run-to-run noise
+(std/California n_mix=3 seed 0: 0.7258 vs 0.7295; uncapped/Kin8nm: 0.9254 vs 0.9219;
+highdim/CPU_act: 0.9665 vs 0.9693; classify/Wine: 0.9444 vs 0.9444).
 
 ## The original Colab pipeline
 
