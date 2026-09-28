@@ -1,4 +1,7 @@
-# Reproducing every table and figure
+# Reproducing the paper's tables
+
+Fastest check, no GPU: `python3 tables/verify_paper_numbers.py` recomputes every table and every quoted statistic from `results/` and compares with the camera-ready (488 cells + 60 statistics; all match on 28 Sept 2026).
+
 
 Every number in the revised paper comes from a CSV under `results/`, and every LaTeX table body
 is regenerated from those CSVs by one command. Re-running the experiments themselves needs a

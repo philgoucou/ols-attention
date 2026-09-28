@@ -108,6 +108,21 @@ variant, sublayer factorial, residual/LayerNorm ablations, mixer/attention compo
 controls) are in `experiments/modal/` with their CSVs under `results/`; `results/README.md` lists
 every file with its columns.
 
+## Checking the paper's numbers without re-running anything
+
+```bash
+python3 tables/verify_paper_numbers.py
+```
+
+recomputes every table of the paper from the CSVs in `results/`, compares each cell with
+`tables/paper_snapshot.tex` (the table bodies exactly as printed in the camera-ready), checks the
+submitted-convention table against the rows the original Colab notebooks printed, and recomputes
+the 60 statistics quoted in the text (paired differences, standard errors, p-values, average ranks,
+win counts). Result on 28 Sept 2026: **488 table cells and 60 quoted statistics, all match**
+(exit code 0). Difference columns in the paper are differences of the printed 3-decimal values, so
+that a reader subtracting two printed numbers recovers the printed difference; the script applies
+the same convention.
+
 ## Running the Modal experiments
 
 Each `rebuttal_*.py` is a [Modal](https://modal.com) app. The pattern used throughout:

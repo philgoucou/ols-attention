@@ -73,7 +73,7 @@ for d in DS:
     dif = (pv.loc[d]['RB'] - pv.loc[d]['FTT']).dropna()
     se = dif.std(ddof=1) / np.sqrt(len(dif))
     p = stats.ttest_1samp(dif, 0)[1]
-    rows.append(f"{d} & {ys.loc[d,'FTT']:.3f} & {ys.loc[d,'RB']:.3f} & {dif.mean():+.3f} & {se:.3f} & {p:.2f} \\\\")
+    rows.append(f"{d} & {ys.loc[d,'FTT']:.3f} & {ys.loc[d,'RB']:.3f} & {round(ys.loc[d,'RB'],3)-round(ys.loc[d,'FTT'],3):+.3f} & {se:.3f} & {p:.2f} \\\\")  # difference of the displayed values
 allp = (pv['RB'] - pv['FTT']).dropna()
 se = allp.std(ddof=1) / np.sqrt(len(allp))
 p = stats.ttest_1samp(allp, 0)[1]
@@ -175,9 +175,9 @@ out['tabpfn8'] = "\n".join(f"{d} & {ys.loc[d,'FTT']:.3f} & {ys.loc[d,'RB']:.3f} 
 # ---------- trimmed configuration + ladder ----------
 pc = load('audit/audit_pca_results.csv')
 tr = pc[pc.variant == 'mix2_ffn0_pca50'].groupby('dataset')['r2'].mean().reindex(DS)
-out['trim'] = "\n".join(f"{d} & {ys.loc[d,'FTT']:.3f} & {ys.loc[d,'RB']:.3f} & {tr[d]:.3f} & {tr[d]-ys.loc[d,'FTT']:+.3f} \\\\" for d in DS) + \
-    f"\n\\midrule\nMean & {ys['FTT'].mean():.3f} & {ys['RB'].mean():.3f} & {tr.mean():.3f} & {tr.mean()-ys['FTT'].mean():+.3f} \\\\"
-lad = [('1 mixer + FFN (= Reg.~Blk)', 200, 'mix1_ffn1_pca200'), ('1 mixer + FFN', 100, 'mix1_ffn1_pca100'),
+out['trim'] = "\n".join(f"{d} & {ys.loc[d,'FTT']:.3f} & {ys.loc[d,'RB']:.3f} & {tr[d]:.3f} & {round(tr[d],3)-round(ys.loc[d,'FTT'],3):+.3f} \\\\" for d in DS) + \
+    f"\n\\midrule\nMean & {ys['FTT'].mean():.3f} & {ys['RB'].mean():.3f} & {tr.mean():.3f} & {round(tr.mean(),3)-round(ys['FTT'].mean(),3):+.3f} \\\\"  # differences of displayed values
+lad = [('1 mixer + FFN ($\\approx$ Reg.~Blk)', 200, 'mix1_ffn1_pca200'), ('1 mixer + FFN', 100, 'mix1_ffn1_pca100'),
        ('1 mixer + FFN', 50, 'mix1_ffn1_pca50'), ('1 mixer + FFN', 25, 'mix1_ffn1_pca25'),
        ('2 mixers, no FFN', 200, 'mix2_ffn0_pca200'), ('2 mixers, no FFN', 100, 'mix2_ffn0_pca100'),
        ('2 mixers, no FFN', 50, 'mix2_ffn0_pca50'), ('2 mixers, no FFN', 25, 'mix2_ffn0_pca25')]
