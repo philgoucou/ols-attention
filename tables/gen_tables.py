@@ -94,7 +94,7 @@ cols = ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'RB']
 out['abl_grid'] = "\n".join(d + " & " + " & ".join(f"{g.loc[d, c]:.3f}" for c in cols) + " \\\\" for d in DS)
 rk = g.rank(axis=1, ascending=False).mean()
 PR = {'A0': 101697, 'A1': 106305, 'A2': 21697, 'A3': 173249, 'A4': 34177, 'A5': 33013,
-      'A6': 89985, 'A7': 101377, 'RB': 30401}
+      'A6': 89921, 'A7': 101249, 'RB': 30401}
 LBL = {'A0': 'A0 & FT-Transformer (3 blocks, $d_{\\text{model}}=64$)',
        'A1': 'A1 & FT-Transformer + degree-2 polynomial inputs',
        'A2': 'A2 & Reg.~Blk without the polynomial expansion',
