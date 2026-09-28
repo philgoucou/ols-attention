@@ -1,4 +1,5 @@
-"""Resilient collector for the spawned Superconductivity RB seeds (v2).
+"""Resilient collector for the spawned Superconductivity RB seeds (v2). Formerly
+collect_super.py; splices the harvested seeds into highdim_results.csv next to itself.
 
 Key properties:
   * The GPU work runs on the DEPLOYED app, fully server-side — it does not

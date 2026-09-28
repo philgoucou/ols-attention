@@ -1,6 +1,31 @@
+# Python
 __pycache__/
 *.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+*.egg-info/
+
+# macOS
 .DS_Store
+
+# Modal spawn / collect state (written next to the collectors)
 *_call_ids.json
 *_collected.json
+collected_results.json
+
+# Script outputs that are not part of the record
 *.log
+consolidated_report.txt
+verification_report.txt
+response_*.md
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc

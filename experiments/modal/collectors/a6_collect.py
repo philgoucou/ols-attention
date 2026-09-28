@@ -1,4 +1,5 @@
-"""Resilient collector for A6 spawns (same contract as collect_super v2):
+"""Resilient collector for the first-wave (raw-target) A6 spawns of a6_spawn.py, i.e.
+the app neurips-31482-a6 -> results/rebuttal/a6_results.csv (same contract as super_collect.py v2):
 client-side errors retried with backoff, per-call progress persisted, rerunnable.
 Writes a6_results.csv when all calls resolve."""
 import json, os, time

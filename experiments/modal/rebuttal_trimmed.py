@@ -1,6 +1,6 @@
 """
 Trimmed configuration of the Regression Block ("how far can the block be cut", App. E of
-the revised paper): n_mix mixing sublayers LN(h + W(PCA_50(polycross(h)))), NO feed-forward
+the revised paper). Formerly rebuttal_aggressive.py; the CSV keeps the tag agg: n_mix mixing sublayers LN(h + W(PCA_50(polycross(h)))), NO feed-forward
 sublayer, NO attention, mean-pool + linear head. 7,489 parameters at P = 8 (against 30,401
 for the block and 101,697 for the FT-Transformer). Run on four settings:
 
@@ -21,8 +21,9 @@ params identical on all four settings; scores 0.7258 vs 0.7295 (std/California, 
 0.9254 vs 0.9219 (uncapped/Kin8nm), 0.9665 vs 0.9693 (highdim/CPU_act), 0.9444 vs 0.9444
 (classify/Wine), i.e. within GPU run-to-run noise.
 
-    modal run   rebuttal_aggressive.py::canary      # 4 cells vs the saved CSV
-    modal deploy rebuttal_aggressive.py             # then spawn with the usual pattern
+    modal run   rebuttal_trimmed.py::canary      # 4 cells vs the saved CSV
+    modal deploy rebuttal_trimmed.py             # then spawn run_trim(setting, dataset, n_mix, ncomp, seed_idx)
+                                                 # with tag 'agg' and harvest with the collector template
 """
 from __future__ import annotations
 import pickle

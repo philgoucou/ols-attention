@@ -1,5 +1,13 @@
 """
-A6: Regression Block WIDTH-SCALED UP to FT-Transformer's ~100K parameter budget.
+Row A7 of the ablation grid (App. E of the revised paper): the Regression Block
+WIDTH-SCALED UP to FT-Transformer's ~100K parameter budget, corrected protocol
+(features AND targets standardized on the training split).
+
+Formerly rebuttal_a6.py. "A6" below, in the app name and in the 'config' field of
+the rows it writes is this row's pre-renumbering label: the revised paper calls it
+A7 (its A6 is the 3-block stack, variant cur_L3 of rebuttal_faithful.py). Output:
+tag a6ystd -> results/audit/audit_a6ystd_results.csv (collectors/a6ystd_collect.py).
+Its cold-start twin is rebuttal_a7_widened_nowarm.py.
 
 Completes the capacity-vs-architecture 2x2:
     FT-T @100K (A0) | FT-T @30K (A5, collapses) | RB @30K (paper) | RB @100K (A6, this)
@@ -9,7 +17,10 @@ budget; A6 searches RB's (d_model, n_components) with ffn = 2*d_model to match
 FT-T's budget for each dataset's P. Everything else (training loop, seeds,
 capped N=5000, warm-start) identical to the paper's RB.
 
-Deployed-app pattern: `modal deploy rebuttal_a6.py`, then spawn via a6_spawn.py.
+Deployed-app pattern: `modal deploy rebuttal_a7_widened.py` (app neurips-31482-a6ystd),
+spawn run_a6(dataset, seed_idx) over 8 datasets x 5 seeds with tag 'a6ystd' (the
+collectors/a6_spawn.py helper targets the first-wave app name neurips-31482-a6, whose
+raw-target run is results/rebuttal/a6_results.csv), then python collectors/a6ystd_collect.py.
 """
 from __future__ import annotations
 import pickle
@@ -31,8 +42,8 @@ image = (modal.Image.debian_slim(python_version="3.11")
          .pip_install("numpy==1.26.4", "pandas==2.2.3", "scikit-learn==1.5.2", "torch==2.4.1"))
 cache_vol = modal.Volume.from_name("neurips-31482-cache", create_if_missing=True)
 CACHE_DIR = "/cache"
-app = modal.App("neurips-31482-a7nowarm")
-CODE_VERSION = "v3-a7-nowarm"
+app = modal.App("neurips-31482-a6ystd")
+CODE_VERSION = "v2-a6-ystd"
 
 
 def _load_cached():
@@ -98,7 +109,7 @@ def pick_a6_dims(nf):
     return best[0], best[1], target
 
 
-# ---- train_rb_variant: verbatim RB path from rebuttal_modal.py ----
+# ---- train_rb_variant: verbatim RB path from rebuttal_v4_port.py (formerly rebuttal_modal.py) ----
 def train_rb_variant(X_train, y_train, X_test,
                      n_components=POLY_PCA_COMP, d_model=POLY_D_MODEL,
                      ffn_dim=POLY_FFN_DIM, epochs=POLY_EPOCHS,
@@ -174,11 +185,12 @@ def train_rb_variant(X_train, y_train, X_test,
             xb = torch.from_numpy(X_ws[i:i+4096].astype(np.float32)).to(device)
             phis.append(model.get_feat(model.embed_x(xb)).mean(1).cpu().numpy())
     phi_pooled = np.concatenate(phis)
-    # WARM START DISABLED. Everything else (widened d_model/ncomp, PCA fit, seeds,
-    # training loop) is identical to A7. This isolates whether the ridge warm start
-    # is what makes extra width irrelevant, or whether the polynomial feature space
-    # is simply saturated well below 260 components.
-    reg = Ridge(alpha=1.0); reg.fit(phi_pooled, y_train[:WS_N])  # fit but DISCARD
+    reg = Ridge(alpha=1.0); reg.fit(phi_pooled, y_train[:WS_N])
+    with torch.no_grad():
+        model.W.weight.data[0] = torch.from_numpy(reg.coef_.astype(np.float32)).to(device)
+        model.W.bias.data.zero_()
+        model.head.weight.data.zero_(); model.head.weight.data[0, 0] = 1.0
+        model.head.bias.data.fill_(float(reg.intercept_))
 
     N = X_train.shape[0]; n_val = max(1, int(N * 0.15))
     idx = np.random.permutation(N)
@@ -231,12 +243,12 @@ def run_a6(dataset_name: str, seed_idx: int):
         d, ncomp, target = pick_a6_dims(P)
         pred, info = train_rb_variant(Xtr, ytr, Xte, n_components=ncomp,
                                       d_model=d, ffn_dim=2 * d, seed=seed)
-        return {'kind': 'a7nowarm', 'code_version': CODE_VERSION, 'dataset': dataset_name, 'config': 'A6',
+        return {'kind': 'a6ystd', 'code_version': CODE_VERSION, 'dataset': dataset_name, 'config': 'A6',
                 'seed_idx': seed_idx, 'r2': float(r2_score(yte, pred)),
                 'params': int(info['n_params']), 'd_model': d, 'ncomp': ncomp,
                 'ftt_target': int(target), 'wall_s': _t.time() - t0, 'error': None}
     except Exception as e:
-        return {'kind': 'a7nowarm', 'code_version': CODE_VERSION, 'dataset': dataset_name, 'config': 'A6',
+        return {'kind': 'a6ystd', 'code_version': CODE_VERSION, 'dataset': dataset_name, 'config': 'A6',
                 'seed_idx': seed_idx, 'r2': float('nan'), 'params': None,
                 'd_model': None, 'ncomp': None, 'ftt_target': None,
                 'wall_s': _t.time() - t0,

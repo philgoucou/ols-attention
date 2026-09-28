@@ -1,16 +1,17 @@
 """
-AUDIT PROBE ROUND 3 — provenance test for the published Att.Reg numbers.
+AUDIT PROBE ROUND 4 — the legacy attention net of round 3 under the corrected
+protocol and a longer step budget.
 
-Hypothesis: Table 1's Att.Reg column and the MC Att.Reg line were produced by
-colab_full.py::train_torch_model — a generic 2-block self-attention regressor
-(M=4 heads, 300 AdamW steps, lr 1e-3, wd 1e-3) — NOT by the Eq.(24) estimator
-the paper describes. This file replicates train_torch_model VERBATIM (including
-defaults from the colab_full call site) and runs it on the Table-1 protocol and
-the MC grid. A second arm replicates the legacy pipeline's test-conditioned
-retry (refit with reg/100 when test R^2 < 0.05, keep the better test score) —
-FORENSICS ONLY, to fingerprint provenance; never for reporting.
+Same VERBATIM port of colab_full.py::train_torch_model (the generic 2-block
+self-attention regressor, M=4 heads, AdamW, lr 1e-3, wd 1e-3) as audit_probes3.py,
+but run_legacy_attn takes (steps, ystd) instead of with_retry: the target is
+standardized on the training split when ystd is set, and the number of steps is a
+parameter. The saved grid is steps in {300, 3000} x ystd=True, 8 datasets x 5 seeds
+(audit_legacy4_results.csv); there is no test-conditioned retry arm. run_mc_legacy is
+unchanged from round 3. FORENSICS ONLY, to fingerprint the provenance of the submitted
+Att.Reg column; never for reporting.
 
-Deploy: modal deploy audit_probes3.py   (app: neurips-31482-audit3)
+Deploy: modal deploy audit_probes4.py   (app: neurips-31482-audit4)
 """
 from __future__ import annotations
 import pickle

@@ -1,10 +1,12 @@
 """Generate every LaTeX table body for the revision from the run CSVs, so no
 number is retyped by hand. Output: tables_generated.tex (blocks separated by
 '%%%% ===== name ====='), plus a compact console summary of the test statistics."""
+import os
 import pandas as pd, numpy as np
 from scipy import stats
 
-D = '/Users/UQAM/Documents/papers/ols-attention-rebuttal-neurips2026'
+HERE = os.path.dirname(os.path.abspath(__file__))
+D = os.path.join(HERE, '..', 'results')   # the repo's results/ folder (audit/ and rebuttal/)
 DS = ['California', 'Yacht', 'Energy', 'Concrete', 'Airfoil', 'Abalone', 'Kin8nm', 'Protein']
 N = {'California': 5000, 'Yacht': 308, 'Energy': 768, 'Concrete': 1030, 'Airfoil': 1503,
      'Abalone': 4177, 'Kin8nm': 5000, 'Protein': 5000}
@@ -13,7 +15,12 @@ P = {'California': 8, 'Yacht': 6, 'Energy': 8, 'Concrete': 8, 'Airfoil': 5, 'Aba
 
 
 def load(p):
-    d = pd.read_csv(f'{D}/{p}')
+    # Path resolution only. The CSV names below are the working-directory names used
+    # while the paper was revised: 'audit/x.csv' -> results/audit/x.csv,
+    # 'results/x.csv' (first rebuttal wave) -> results/rebuttal/x.csv, and the bare
+    # 'audit_agg_results.csv' -> results/audit/.
+    sub, _, name = p.rpartition('/')
+    d = pd.read_csv(f"{D}/{'rebuttal' if sub == 'results' else 'audit'}/{name}")
     return d[d.error.isna()] if 'error' in d else d
 
 
@@ -185,10 +192,10 @@ ag = ag[(ag.n_mix == 2) & (ag.ncomp == 50)]
 sc = ag.groupby(['setting', 'dataset'])['score'].mean()
 out['trim_scope'] = "; ".join(f"{s}/{d}: {v:.3f}" for (s, d), v in sc.items() if s in ('uncapped', 'highdim'))
 
-with open('tables_generated.tex', 'w') as fh_:
+with open(os.path.join(HERE, 'tables_generated.tex'), 'w') as fh_:
     for k, v in out.items():
         fh_.write(f"%%%% ===== {k} =====\n{v}\n\n")
-print("wrote tables_generated.tex:", ", ".join(out))
+print(f"wrote {os.path.join(HERE, 'tables_generated.tex')}:", ", ".join(out))
 print("\nT1 corrected:\n" + out['t1_corrected'])
 for k in ['t1_se_note', 'abl_tests', 'abl_wins', 'ws_tests', 'ws_raw', 'clf_rank', 'trim_tests', 'trim_scope']:
     print(f"\n{k}: {out[k]}")

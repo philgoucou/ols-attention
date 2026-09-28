@@ -1,5 +1,7 @@
 """
-y-STANDARDIZED rerun of the ablation grid AND the warm-start decomposition.
+y-STANDARDIZED rerun of the ablation grid (A0-A5, RB) AND the warm-start decomposition
+(softmax / rb_nowarm / rb_warm): the corrected-protocol runs behind App. E of the revised
+paper. Formerly rebuttal_ystd_grids.py.
 
 Why: the target-scaling artifact does not hit all configurations equally. The Ridge
 warm-start fires only when the mixer is a regression (A2/A3/RB); the FT-T configs
@@ -12,7 +14,10 @@ Grids:
   ablation  : 8 datasets x {A0,A1,A2,A3,A4,A5,RB} x 5 seeds = 280
   warmstart : 8 datasets x {softmax, rb_nowarm, rb_warm} x 5 seeds = 120
 
-Deploy: modal deploy rebuttal_ystd_grids.py   (app: neurips-31482-ystd-grids)
+Deploy: modal deploy rebuttal_ablation_warmstart.py   (app: neurips-31482-ystd-grids)
+Spawn run_abl_ystd(dataset, config, seed_idx) with tag 'ablystd' and run_ws_ystd(dataset,
+config, seed_idx) with tag 'wsystd', harvest with the collector template of collectors/
+-> results/audit/audit_ablystd_results.csv and audit_wsystd_results.csv.
 """
 from __future__ import annotations
 import pickle

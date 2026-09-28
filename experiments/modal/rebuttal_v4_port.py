@@ -1,15 +1,23 @@
 """
-Modal fan-out of the NeurIPS 31482 rebuttal grid.
+Modal port of the submitted Table 1 pipeline (paper_code/real_data_benchmark_v4.py):
+the first rebuttal wave. Formerly rebuttal_modal.py.
 
 Splits the v4 Colab cell into one job per (dataset, config, seed) tuple,
 runs them across many T4 GPUs concurrently, and prints the same
-consolidated report at the end.
+consolidated report at the end. Protocol of the submission: features
+standardized on the training split, RAW targets (the corrected-protocol
+reruns are rebuttal_ablation_warmstart.py and rebuttal_uncapped_ystd.py).
+Writes, in the working directory (kept under results/rebuttal/):
+    ablation_grid_results.csv   A0-A5 and RB, 8 datasets x 5 seeds
+    uncapped_results.csv        OLS / RF / FT-T / RB at full N (California, Kin8nm, Protein)
+    tabpfn_results.csv          TabPFN on the eight datasets
 
 Usage:
-    modal run rebuttal_modal.py            # everything
-    modal run rebuttal_modal.py --part abl # ablation only
-    modal run rebuttal_modal.py --part unc # uncapped only
-    modal run rebuttal_modal.py --part tab # tabpfn only
+    modal run rebuttal_v4_port.py            # everything
+    modal run rebuttal_v4_port.py --part abl # ablation only
+    modal run rebuttal_v4_port.py --part unc # uncapped only
+    modal run rebuttal_v4_port.py --part tab # tabpfn only
+    modal run rebuttal_v4_port.py::patch_protein_rb   # re-run the Protein/RB uncapped seeds, splice them in
 """
 
 from __future__ import annotations

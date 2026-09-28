@@ -1,5 +1,6 @@
 """
-Modal fan-out — Tier-1 defensive experiments.
+Modal fan-out — warm-start decomposition and learning curves (raw-target protocol of
+the first rebuttal wave). Formerly rebuttal_extras.py.
 
 (A) Warm-start ablation, all 8 datasets, capped N, 5 seeds. Same-seed decomposition
     A4-softmax  ->  RB-nowarm (regression readout, random init)  ->  RB-warm (+ Ridge init)
@@ -9,7 +10,9 @@ Modal fan-out — Tier-1 defensive experiments.
 (B) Learning curves: R2 vs N in {500,1000,2500,5000,10000,full} for FT-T and RB on
     California / Kin8nm / Protein. Fixed test split per seed; train set subsampled.
 
-    modal run rebuttal_extras.py
+    modal run rebuttal_warmstart_lcurve.py
+Writes warmstart_results.csv and lcurve_results.csv in the working directory (kept under
+results/rebuttal/). The corrected-protocol warm-start rerun is rebuttal_ablation_warmstart.py.
 """
 from __future__ import annotations
 import time

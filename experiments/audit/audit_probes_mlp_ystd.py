@@ -1,19 +1,18 @@
 """
-AUDIT PROBE SUITE — empirically verifies every checkable claim in the paper.
+AUDIT PROBE SUITE, MLP column under the corrected protocol: the MLP column of the
+revised Table 1. Formerly experiments/modal/audit_probes_mlpystd.py.
 
-  ystd    : FT-T & RB with y standardized (is the Airfoil/Yacht FT-T collapse a
-            target-scaling artifact?)                                   [80  T4]
-  sens    : App C sensitivity sentence "d_model {32,64,128}, dropout [0,.3],
-            lr [1e-4,1e-2] moves R^2 < 2pp on every dataset"            [240 T4]
-  cpu     : OLS & RF capped — verify Table 1 baseline columns           [80 CPU]
-  mlp     : MLP per paper spec (3x200 ReLU, drop .2, Adam 1e-3, batch 64,
-            patience 20, 15% val) — verify Table 1 MLP column           [40  T4]
-  attreg  : Eq.(24) Attention Regression reimplemented EXACTLY per the
-            appendix spec — verify Table 1 Att.Reg column               [40  T4]
-  mc      : full Monte Carlo reimplementation per appendix spec —
-            6 DGP x 4 N x 4 SNR x 10 reps x 5 models                    [96  T4]
+A copy of audit_probes.py whose only functional difference is in run_mlp: the target is
+standardized on the training split like the features (prep_capped(..., ystd=True)). The
+submitted MLP column standardized X only; the MLP is a trained network, so unlike OLS and
+RF it is not scale-equivariant, and its column was rerun under the protocol used for the
+FT-Transformer and the Regression Block. The other probe families (ystd, sens, cpu,
+attreg, mc) are carried over unchanged from audit_probes.py; the only CSV produced from
+this app is audit_mlpystd_results.csv (kind 'mlpystd', CODE_VERSION v2-mlp-ystd).
 
-Deploy: modal deploy audit_probes.py   (app: neurips-31482-audit)
+Deploy: modal deploy audit_probes_mlp_ystd.py   (app: neurips-31482-mlpystd)
+Spawn run_mlp(dataset, seed_idx) over 8 datasets x 5 seeds with tag 'mlpystd', then
+python collectors/mlpystd_collect.py  ->  results/audit/audit_mlpystd_results.csv.
 """
 from __future__ import annotations
 import pickle

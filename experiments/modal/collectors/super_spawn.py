@@ -1,4 +1,5 @@
-"""Fire-and-forget: spawn the 5 Superconductivity RB seeds on the DEPLOYED app.
+"""Fire-and-forget: spawn the 5 Superconductivity RB seeds on the DEPLOYED app
+(rebuttal_highdim.py::run_nn_big, A100-80GB). Formerly spawn_super.py.
 Call IDs go to super_call_ids.json so any later client can collect."""
 import json
 import modal
