@@ -74,6 +74,31 @@ parameter counts identical on every setting; scores within GPU run-to-run noise
 (std/California n_mix=3 seed 0: 0.7258 vs 0.7295; uncapped/Kin8nm: 0.9254 vs 0.9219;
 highdim/CPU_act: 0.9665 vs 0.9693; classify/Wine: 0.9444 vs 0.9444).
 
+## Provenance of the submitted numbers (verified 28 Sept 2026 from the notebooks' saved outputs)
+
+The submitted Table 1 was assembled from two Colab runs whose printed LaTeX rows are still in the
+notebooks under `paper_code/notebooks/`:
+
+| Column(s) of the submitted Table 1 | Produced by | Saved output |
+|---|---|---|
+| OLS, RF, MLP, Att. Reg | `real_data_benchmark_v3.py` (cell 1 of `Attention_paper_simuls.ipynb`), with the Attention Regression estimator of `simulation_attention_regression.py` | the `\\` rows printed at the end of that cell |
+| FT-Transformer, Reg. Block | `real_data_benchmark_v4.py` (cell 4 of `Candidate2.ipynb`; the run is cell 3) | the `\\` rows printed at the end of that cell |
+
+All 48 cells (6 columns x 8 datasets) match the submitted table to the printed precision. Note that the
+v4 run also printed an Attention Regression column (e.g. California 0.715, Concrete 0.171, Airfoil below
+zero) that differs from the v3 run's (0.738, 0.837, 0.757); the submitted table used the v3 values. The
+revised paper keeps that column: it is invariant to the target-scaling correction, which is what the
+revision changed.
+
+The Monte Carlo of Section 4 / Appendix B is the union of `AttReg_simul1.ipynb` and `AttReg_simul2.ipynb`
+(cell 1 of each: 96 conditions x 5 repeats, five attention heads, RF and GBM on), i.e. the paper's 10
+replications. Pooled over the two, the saved per-condition rows give OLS 0.279, RF 0.454, GBM 0.418,
+Attention Regression 0.476 (paper: 0.28, 0.45, 0.42, 0.48; Linear DGP OLS 0.557, paper 0.56), and the
+same per-DGP ordering the paper describes. The MLP column came from a separate run of
+`simulation_attention_regression.py` with only OLS and the MLP switched on; the saved 5-repeat run in
+cell 2 of `Attention_paper_simuls.ipynb` gives an overall MLP R^2 of 0.534 against 0.52 in the paper, so
+the exact run behind the paper's MLP figure was not saved.
+
 ## The original Colab pipeline
 
 `paper_code/simulation_attention_regression.py` defines the Attention Regression estimator (multi-head,
