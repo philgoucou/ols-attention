@@ -150,7 +150,7 @@ quotes = quotes_ladder + [
  ("App. E: A6-RB mean (-0.015)", pt(ns['pc3'], pva['RB'])[0], -0.015, 0.0005),
  ("App. E: A7-RB mean (+0.001)", pt(ns['pa7'], pva['RB'])[0], 0.001, 0.0005),
  ("App. E: A7-RB p (0.57)", pt(ns['pa7'], pva['RB'])[1], 0.57, 0.005),
- ("App. E: A2 loss vs RF-OLS gap, Spearman 0.71", stats.spearmanr(mc['RF']-mc['OLS'], g['RB']-g['A2']).statistic, 0.71, 0.005),
+ ("App. E: A2 loss vs RF-OLS gap, Spearman 0.74 (from the printed Table 1 and ablation means)", stats.spearmanr(t1['RF']-t1['OLS'], g['RB']-g['A2']).statistic, 0.74, 0.005),
  ("App. E: warm start +0.001", pt(pw['rb_warm'], pw['rb_nowarm'])[0], 0.001, 0.0005),
  ("App. E / App. C: warm start on raw targets +0.021", pt(pwr['rb_warm'], pwr['rb_nowarm'])[0], 0.021, 0.0005),
  ("App. E: raw-target p 0.021", pt(pwr['rb_warm'], pwr['rb_nowarm'])[1], 0.021, 0.0005),
