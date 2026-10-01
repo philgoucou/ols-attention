@@ -115,7 +115,7 @@ python3 tables/verify_paper_numbers.py
 ```
 
 recomputes every table of the paper from the CSVs in `results/`, compares each cell with
-`tables/paper_snapshot.tex` (the table bodies exactly as printed in the camera-ready), checks the
+`tables/paper_snapshot.tex` (the table bodies exactly as printed in the camera-ready, regenerated from `main.tex` with `tables/extract_snapshot.py`), checks the
 submitted-convention table against the rows the original Colab notebooks printed, and recomputes
 the 60 statistics quoted in the text (paired differences, standard errors, p-values, average ranks,
 win counts). Result on 28 Sept 2026: **488 table cells and 60 quoted statistics, all match**
