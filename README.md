@@ -118,7 +118,7 @@ recomputes every table of the paper from the CSVs in `results/`, compares each c
 `tables/paper_snapshot.tex` (the table bodies exactly as printed in the camera-ready, regenerated from `main.tex` with `tables/extract_snapshot.py`), checks the
 submitted-convention table against the rows the original Colab notebooks printed, and recomputes
 the statistics quoted in the text (paired differences, standard errors, p-values, average ranks,
-win counts). Result on 4 Oct 2026: **313 table cells and 52 quoted statistics, all match**
+win counts). Result on 5 Oct 2026: **313 table cells and 52 quoted statistics, all match**
 (exit code 0). Difference columns in the paper are differences of the printed 3-decimal values, so
 that a reader subtracting two printed numbers recovers the printed difference; the script applies
 the same convention.
@@ -166,7 +166,7 @@ The Monte Carlo of Section 4 / Appendix B is the union of `AttReg_simul1.ipynb` 
 (cell 1 of each: 96 conditions x 5 repeats, five attention heads, RF and GBM on), i.e. the paper's 10
 replications. Pooled over the two, the saved per-condition rows give OLS 0.279, RF 0.454, GBM 0.418,
 Attention Regression 0.476 (paper: 0.28, 0.45, 0.42, 0.48; Linear DGP OLS 0.557, paper 0.56), and the
-same per-DGP ordering the paper describes. Attention Regression fits with a test R² below 0.1 were refit with λ = 1e-5 and the refit kept (68 of 960 fits), as disclosed in Appendix B. The MLP column came from a separate run of
+same per-DGP ordering the paper describes. Attention Regression fits with a test R² below 0.1 were refit with λ = 1e-5 and the refit kept (68 of 960 fits). Appendix B states the rule. The MLP column came from a separate run of
 `simulation_attention_regression.py` with only OLS and the MLP switched on; the saved 5-repeat run in
 cell 2 of `Attention_paper_simuls.ipynb` gives an overall MLP R^2 of 0.534 against 0.52 in the paper, so
 the exact run behind the paper's MLP figure was not saved.
