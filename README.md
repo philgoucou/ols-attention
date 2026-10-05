@@ -89,12 +89,12 @@ with a non-empty `error` column before averaging.
 | Table 1: MLP (corrected) | `experiments/audit/audit_probes_mlp_ystd.py` (formerly `experiments/modal/audit_probes_mlpystd.py`) | `results/audit/audit_mlpystd_results.csv` |
 | Table 1: OLS, RF (scale-invariant, verified) | `experiments/audit/audit_probes.py` (`run_cpu`) | `results/audit/audit_cpu_results.csv` |
 | Table 1: Att. Reg (scale-equivariance check) | `experiments/audit/audit_probes2.py` | `results/audit/audit_attreg{,_std}_results.csv` |
-| Table 1, submitted convention (App. D) | `paper_code/real_data_benchmark_v4.py`; Modal port `experiments/modal/rebuttal_v4_port.py` (formerly `rebuttal_modal.py`) | `results/rebuttal/ablation_grid_results.csv` (A0/RB columns) |
+| Table 1, submitted convention (not reported in the paper) | `paper_code/real_data_benchmark_v4.py`; Modal port `experiments/modal/rebuttal_v4_port.py` (formerly `rebuttal_modal.py`) | `results/rebuttal/ablation_grid_results.csv` (A0/RB columns) |
 | Paired SEs, sign test (App. D) | `tables/gen_tables.py` on the y-std CSV | `results/audit/audit_ystd_results.csv` |
 | Ablations A0–A5, RB (App. E) | `experiments/modal/rebuttal_ablation_warmstart.py` (formerly `rebuttal_ystd_grids.py`) | `results/audit/audit_ablystd_results.csv` |
 | A6, three stacked blocks | `experiments/modal/rebuttal_faithful.py` (variant `cur_L3`) | `results/audit/audit_faithful_results.csv` |
 | A7, widened block (and its cold-start twin) | `experiments/modal/rebuttal_a7_widened.py` (formerly `rebuttal_a6.py`), `rebuttal_a7_widened_nowarm.py` (formerly `rebuttal_a7nowarm.py`) | `results/audit/audit_a6ystd_results.csv`, `audit_a7nowarm_results.csv` |
-| Readout vs warm start (App. E) | `experiments/modal/rebuttal_ablation_warmstart.py` (warm-start family); raw-target run in `rebuttal_warmstart_lcurve.py` (formerly `rebuttal_extras.py`) | `results/audit/audit_wsystd_results.csv`, `results/rebuttal/warmstart_results.csv` |
+| Readout vs warm start (not reported in the paper) | `experiments/modal/rebuttal_ablation_warmstart.py` (warm-start family); raw-target run in `rebuttal_warmstart_lcurve.py` (formerly `rebuttal_extras.py`) | `results/audit/audit_wsystd_results.csv`, `results/rebuttal/warmstart_results.csv` |
 | Trimmed configuration and PCA ladder (App. E) | `experiments/modal/rebuttal_sublayer.py` (`run_pca_sweep`) | `results/audit/audit_pca_results.csv` |
 | Trimmed configuration at full N / higher P / classification | `experiments/modal/rebuttal_trimmed.py` (formerly `rebuttal_aggressive.py`; reconstruction, see note) | `results/audit/audit_agg_results.csv` |
 | Full sample size (App. F) | `experiments/modal/rebuttal_uncapped_ystd.py`; TabPFN/TabICL: `rebuttal_fm_uncapped.py` | `results/audit/audit_uy_results.csv`, `audit_fm_results.csv`, `audit_fm_tabicl_uncapped.csv` |
@@ -117,8 +117,8 @@ python3 tables/verify_paper_numbers.py
 recomputes every table of the paper from the CSVs in `results/`, compares each cell with
 `tables/paper_snapshot.tex` (the table bodies exactly as printed in the camera-ready, regenerated from `main.tex` with `tables/extract_snapshot.py`), checks the
 submitted-convention table against the rows the original Colab notebooks printed, and recomputes
-the 60 statistics quoted in the text (paired differences, standard errors, p-values, average ranks,
-win counts). Result on 28 Sept 2026: **488 table cells and 60 quoted statistics, all match**
+the statistics quoted in the text (paired differences, standard errors, p-values, average ranks,
+win counts). Result on 4 Oct 2026: **313 table cells and 52 quoted statistics, all match**
 (exit code 0). Difference columns in the paper are differences of the printed 3-decimal values, so
 that a reader subtracting two printed numbers recovers the printed difference; the script applies
 the same convention.
@@ -166,7 +166,7 @@ The Monte Carlo of Section 4 / Appendix B is the union of `AttReg_simul1.ipynb` 
 (cell 1 of each: 96 conditions x 5 repeats, five attention heads, RF and GBM on), i.e. the paper's 10
 replications. Pooled over the two, the saved per-condition rows give OLS 0.279, RF 0.454, GBM 0.418,
 Attention Regression 0.476 (paper: 0.28, 0.45, 0.42, 0.48; Linear DGP OLS 0.557, paper 0.56), and the
-same per-DGP ordering the paper describes. The MLP column came from a separate run of
+same per-DGP ordering the paper describes. Attention Regression fits with a test R² below 0.1 were refit with λ = 1e-5 and the refit kept (68 of 960 fits), as disclosed in Appendix B. The MLP column came from a separate run of
 `simulation_attention_regression.py` with only OLS and the MLP switched on; the saved 5-repeat run in
 cell 2 of `Attention_paper_simuls.ipynb` gives an overall MLP R^2 of 0.534 against 0.52 in the paper, so
 the exact run behind the paper's MLP figure was not saved.

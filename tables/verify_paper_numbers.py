@@ -151,9 +151,9 @@ quotes = quotes_ladder + [
  ("App. E: A7-RB mean (+0.001)", pt(ns['pa7'], pva['RB'])[0], 0.001, 0.0005),
  ("App. E: A7-RB p (0.57)", pt(ns['pa7'], pva['RB'])[1], 0.57, 0.005),
  ("App. E: A2 loss vs RF-OLS gap, Spearman 0.74 (from the printed Table 1 and ablation means)", stats.spearmanr(t1['RF']-t1['OLS'], g['RB']-g['A2']).statistic, 0.74, 0.005),
- ("App. E: warm start +0.001", pt(pw['rb_warm'], pw['rb_nowarm'])[0], 0.001, 0.0005),
- ("App. E / App. C: warm start on raw targets +0.021", pt(pwr['rb_warm'], pwr['rb_nowarm'])[0], 0.021, 0.0005),
- ("App. E: raw-target p 0.021", pt(pwr['rb_warm'], pwr['rb_nowarm'])[1], 0.021, 0.0005),
+ ("repo only: warm start +0.001", pt(pw['rb_warm'], pw['rb_nowarm'])[0], 0.001, 0.0005),
+ ("repo only: warm start on raw targets +0.021", pt(pwr['rb_warm'], pwr['rb_nowarm'])[0], 0.021, 0.0005),
+ ("repo only: raw-target p 0.021", pt(pwr['rb_warm'], pwr['rb_nowarm'])[1], 0.021, 0.0005),
  ("App. E: trimmed mean 0.774", tr.mean(), 0.774, 0.0005),
  
  ("App. E: FT-T mean 0.779", ys['FTT'].mean(), 0.779, 0.0005),
@@ -174,8 +174,8 @@ quotes = quotes_ladder + [
  ("App. F: classification rank RF 2.17", c[['LogReg','RF','FTT','RB']].rank(axis=1, ascending=False).mean()['RF'], 2.17, 0.005),
  ("App. F: classification rank LogReg 2.58", c[['LogReg','RF','FTT','RB']].rank(axis=1, ascending=False).mean()['LogReg'], 2.58, 0.005),
  ("App. F: classification rank FT-T 3.17", c[['LogReg','RF','FTT','RB']].rank(axis=1, ascending=False).mean()['FTT'], 3.17, 0.005),
- ("App. D: MLP mean 0.758 -> 0.782 (corrected)", ns['mlp'].mean(), 0.782, 0.0005),
- ("App. D: MLP Airfoil corrected 0.917", ns['mlp']['Airfoil'], 0.917, 0.0005),
+ ("repo only: MLP mean 0.758 -> 0.782 (corrected)", ns['mlp'].mean(), 0.782, 0.0005),
+ ("repo only: MLP Airfoil corrected 0.917", ns['mlp']['Airfoil'], 0.917, 0.0005),
 ]
 ar_raw = ns['load']('audit/audit_attreg_results.csv').set_index(['dataset','seed_idx'])['r2']
 ar_std = ns['load']('audit/audit_attreg_std_results.csv').set_index(['dataset','seed_idx'])['r2']
